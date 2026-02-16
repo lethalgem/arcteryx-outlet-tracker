@@ -7,7 +7,7 @@ compatibility_flags = ["nodejs_compat_v2"]
 binding = "BROWSER"
 
 [triggers]
-crons = ["*/30 * * * *"]
+crons = ["0 17 * * *"]
 
 [[kv_namespaces]]
 binding = "INVENTORY_KV"
