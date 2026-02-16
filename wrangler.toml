@@ -1,0 +1,24 @@
+name = "arcteryx-outlet-tracker"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat_v2"]
+
+[browser]
+binding = "BROWSER"
+
+[triggers]
+crons = ["*/30 * * * *"]
+
+[[kv_namespaces]]
+binding = "INVENTORY_KV"
+id = "ae7a700ceffb4d0e9b8576641cadf510"
+
+[vars]
+EMAIL_FROM = "Arc'teryx Outlet Monitor <outlet@iancash.me>"
+OUTLET_BASE_URL = "https://outlet.arcteryx.com"
+CATEGORIES = "mens/pants"
+SIZE_FILTER = "L"
+
+# Set these via `wrangler secret put`:
+# RESEND_API_KEY
+# EMAIL_TO
